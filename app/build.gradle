@@ -1,0 +1,49 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+apply from: '../dependencies.gradle'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "me.marcooliveira.tweetafeel"
+        minSdkVersion 21
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation deps.kotlinStdlib
+    implementation deps.appCompat
+    implementation deps.core
+    implementation deps.constraintLayout
+    implementation deps.cardView
+    implementation deps.recyclerView
+    implementation deps.lifecycleRuntime
+    implementation deps.lifecycleExtensions
+    implementation deps.lifecycleAnnotations
+    implementation deps.retrofit2
+    implementation deps.gsonConverter
+    implementation deps.picasso
+    implementation deps.multiStateView
+    implementation deps.materialDialogs
+    implementation deps.materialComponents
+    implementation deps.firebase
+    implementation deps.crashlytics
+    implementation deps.recyclerView
+
+    testImplementation deps.junit
+    androidTestImplementation deps.runner
+    androidTestImplementation deps.espresso
+}
