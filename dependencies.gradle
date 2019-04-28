@@ -21,7 +21,6 @@ ext.deps = [
         // Networking
         retrofit2            : "com.squareup.retrofit2:retrofit:2.4.0",
         gsonConverter        : "com.squareup.retrofit2:converter-gson:2.4.0",
-		twitterKit			 : "com.twitter.sdk.android:twitter-core:3.3.0@aar",
 		retrofitCoroutine	 : "com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:0.9.2",
 		loggingInterceptor   : "com.squareup.okhttp3:logging-interceptor:3.8.1",
 

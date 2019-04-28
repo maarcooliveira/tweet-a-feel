@@ -46,7 +46,6 @@ dependencies {
     implementation deps.firebase
     implementation deps.crashlytics
     implementation deps.recyclerView
-    implementation deps.twitterKit
     implementation deps.coroutines
     implementation deps.coroutinesAndroid
     implementation deps.lifecycleViewModel
