@@ -24,6 +24,4 @@ interface Service<T> {
             .build()
             .create(serviceInterface)
     }
-
-
 }

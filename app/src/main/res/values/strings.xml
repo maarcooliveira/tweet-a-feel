@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Tweet a Feel</string>
+    <string name="user_handle">"@%1$s"</string>
 </resources>

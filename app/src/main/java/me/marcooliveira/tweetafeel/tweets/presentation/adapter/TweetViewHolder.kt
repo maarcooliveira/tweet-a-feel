@@ -1,9 +1,11 @@
 package me.marcooliveira.tweetafeel.tweets.presentation.adapter
 
+import android.util.Log
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.item_tweet.view.*
+import me.marcooliveira.tweetafeel.R
 import me.marcooliveira.tweetafeel.core.PicassoCircleTransform
 import me.marcooliveira.tweetafeel.tweets.data.model.Tweet
 
@@ -20,8 +22,10 @@ class TweetViewHolder(view: View,
 
     fun bind(tweet: Tweet) {
         name.text = tweet.user?.name
-        handle.text = tweet.user?.user
+        handle.text = handle.context.getString(R.string.user_handle, tweet.user?.user)
         tweetContent.text = tweet.text
+
+        Log.e("Imageee", "tweet image is: ${tweet.user?.imageUrl}")
 
         picasso.load(tweet.user?.imageUrl)
             .transform(circleTransform)
