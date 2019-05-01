@@ -1,6 +1,7 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'io.fabric'
 
 apply from: '../dependencies.gradle'
 
@@ -57,3 +58,5 @@ dependencies {
     androidTestImplementation deps.runner
     androidTestImplementation deps.espresso
 }
+
+apply plugin: 'com.google.gms.google-services'

@@ -35,7 +35,7 @@ ext.deps = [
 
         // Firebase
 		firebase             : "com.google.firebase:firebase-core:16.0.6",
-		crashlytics 		 : "com.crashlytics.sdk.android:crashlytics:2.9.7",
+		crashlytics 		 : "com.crashlytics.sdk.android:crashlytics:2.9.9",
 
         // Test
         espresso             : "androidx.test.espresso:espresso-core:3.1.1",

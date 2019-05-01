@@ -1,14 +1,16 @@
 package me.marcooliveira.tweetafeel.analysis.presentation
 
 import android.os.Bundle
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
+import com.afollestad.materialdialogs.MaterialDialog
+import com.crashlytics.android.Crashlytics
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_analysis.*
 import me.marcooliveira.tweetafeel.R
+import me.marcooliveira.tweetafeel.core.LoadingException
 import me.marcooliveira.tweetafeel.core.Navigator
 import me.marcooliveira.tweetafeel.core.PicassoCircleTransform
 import me.marcooliveira.tweetafeel.core.switchVisibility
@@ -51,8 +53,14 @@ class AnalysisActivity : AppCompatActivity() {
         })
 
         viewModel.error.observe(this, Observer {
-            // TODO: show error message
-            Log.e("Tweetss", "error: $it")
+            MaterialDialog(this).show {
+                message(R.string.sentiment_loading_error)
+                positiveButton(R.string.button_retry) {
+                    init()
+                }
+                negativeButton(R.string.button_cancel)
+            }
+            Crashlytics.logException(LoadingException(it))
         })
     }
 

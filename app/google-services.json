@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "2912481992",
+    "firebase_url": "https://tweet-a-feel.firebaseio.com",
+    "project_id": "tweet-a-feel",
+    "storage_bucket": "tweet-a-feel.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:2912481992:android:7028ad5ef0906dff",
+        "android_client_info": {
+          "package_name": "me.marcooliveira.tweetafeel"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "2912481992-i4b5apt1cb4hemkitp22e8455bincr67.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAceVFOApCdFZodcy0sVoe0d_kR3QP_zxY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "2912481992-i4b5apt1cb4hemkitp22e8455bincr67.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
