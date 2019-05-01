@@ -9,7 +9,7 @@ internal object TwitterService: Service<TwitterApi> {
 
     fun getTweetsAsync(token: String, userId: String): Deferred<List<Tweet>> {
         return retrofit("https://api.twitter.com/", TwitterApi::class.java)
-            .getTweets(token, userId, 5)
+            .getTweets(token, userId, 10)
     }
 
     fun getTokenAsync(authorization: String): Deferred<Token> {

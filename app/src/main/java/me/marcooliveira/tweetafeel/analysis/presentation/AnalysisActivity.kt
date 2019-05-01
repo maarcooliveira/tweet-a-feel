@@ -3,6 +3,7 @@ package me.marcooliveira.tweetafeel.analysis.presentation
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.squareup.picasso.Picasso
@@ -10,6 +11,7 @@ import kotlinx.android.synthetic.main.activity_analysis.*
 import me.marcooliveira.tweetafeel.R
 import me.marcooliveira.tweetafeel.core.Navigator
 import me.marcooliveira.tweetafeel.core.PicassoCircleTransform
+import me.marcooliveira.tweetafeel.core.switchVisibility
 
 class AnalysisActivity : AppCompatActivity() {
 
@@ -39,7 +41,14 @@ class AnalysisActivity : AppCompatActivity() {
     }
 
     private fun setupListeners() {
-
+        viewModel.sentiment.observe(this, Observer {
+            emojiLoading.stop()
+            emojiLoading.switchVisibility(false)
+            emoji.switchVisibility(true)
+            emoji.text = getString(it.emoji)
+            container.setBackgroundResource(it.background)
+            window.statusBarColor = ContextCompat.getColor(this, it.background)
+        })
 
         viewModel.error.observe(this, Observer {
             // TODO: show error message
@@ -48,7 +57,9 @@ class AnalysisActivity : AppCompatActivity() {
     }
 
     private fun init() {
-
+        tweetContent?.let {
+            viewModel.analyseTweet(it)
+        }
     }
 
 }

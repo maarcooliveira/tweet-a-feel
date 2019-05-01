@@ -12,4 +12,8 @@
 
     <color name="whiteText">#FFFFFF</color>
     <color name="whiteTextDarker">#DADADA</color>
+
+    <color name="sentiment_negative">#CC4646</color>
+    <color name="sentiment_positive">#14aa4b</color>
+    <color name="sentiment_neutral">#FBC02D</color>
 </resources>

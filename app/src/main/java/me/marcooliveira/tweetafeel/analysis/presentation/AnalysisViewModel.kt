@@ -14,6 +14,7 @@ class AnalysisViewModel(application: Application): AndroidViewModel(application)
 
     private val getAnalysis = GetAnalysis()
 
+    internal val sentiment = MutableLiveData<Sentiment>()
     internal val error = MutableLiveData<String?>()
 
     fun analyseTweet(tweet: String) {
@@ -26,8 +27,8 @@ class AnalysisViewModel(application: Application): AndroidViewModel(application)
         }
     }
 
-    private fun handleAnalysis(result: String) {
-
+    private fun handleAnalysis(result: Sentiment) {
+        sentiment.postValue(result)
     }
 
     private fun handleError(errorResponse: Error?) {
