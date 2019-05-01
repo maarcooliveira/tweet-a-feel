@@ -72,6 +72,21 @@
         android:gravity="center"
         android:textColor="#FF000000"
         android:textSize="64sp"
-        android:text="😔" />
+        android:visibility="invisible"
+        tools:text="😔" />
+
+    <com.tomer.fadingtextview.FadingTextView
+        android:id="@+id/emojiLoading"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_margin="24dp"
+        android:gravity="center"
+        android:textColor="#FF000000"
+        android:textSize="64sp"
+        app:timeout="100"
+        app:texts="@array/emojis" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

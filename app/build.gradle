@@ -51,6 +51,7 @@ dependencies {
     implementation deps.lifecycleViewModel
     implementation deps.retrofitCoroutine
     implementation deps.loggingInterceptor
+    implementation deps.fadingTextView
 
     testImplementation deps.junit
     androidTestImplementation deps.runner
