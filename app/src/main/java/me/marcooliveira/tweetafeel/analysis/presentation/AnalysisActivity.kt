@@ -31,7 +31,7 @@ class AnalysisActivity : AppCompatActivity() {
 
     private fun setupView() {
         name.text = userName
-        handle.text = userHandle
+        handle.text = getString(R.string.user_handle, userHandle)
         tweet.text = tweetContent
         picasso.load(userPicture)
             .transform(PicassoCircleTransform())

@@ -9,4 +9,7 @@
     <color name="textLighter">#b2c0cc</color>
     <color name="listDivider">#3CB2C0CC</color>
     <color name="background">#f6f4f4</color>
+
+    <color name="whiteText">#FFFFFF</color>
+    <color name="whiteTextDarker">#DADADA</color>
 </resources>
