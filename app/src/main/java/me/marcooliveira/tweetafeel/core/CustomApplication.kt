@@ -10,5 +10,6 @@ class CustomApplication: Application() {
         super.onCreate()
 
         Fabric.with(this, Crashlytics())
+        prefs().twitterToken = null
     }
 }

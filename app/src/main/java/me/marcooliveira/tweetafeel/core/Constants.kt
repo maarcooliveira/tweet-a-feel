@@ -5,4 +5,6 @@ object Constants {
     const val GOOGLE_KEY = "AIzaSyDBaRSMxLkg2OETBYfbJ9fhSQCi7Ox4Fmk"
     const val GOOGLE_DOCUMENT_TYPE = "PLAIN_TEXT"
     const val GOOGLE_DOCUMENT_ENCODING = "UTF8"
+    const val PREFS_TWITTER_TOKEN = "TWITTER_TOKEN_PREF"
+    const val PREFS_FILE = "me.marcooliveira.tweetafeel"
 }
