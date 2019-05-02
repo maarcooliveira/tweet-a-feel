@@ -7,14 +7,14 @@ import me.marcooliveira.tweetafeel.core.Preferences
 import me.marcooliveira.tweetafeel.tweets.data.model.Tweet
 import me.marcooliveira.tweetafeel.tweets.data.repository.TwitterService
 
-class GetTweets {
+class GetTweets(private val service: TwitterService) {
 
     suspend fun execute(userId: String, prefs: Preferences): Either<Error, List<Tweet>> {
         return try {
             if (prefs.twitterToken.isNullOrBlank()) {
-                prefs.twitterToken = "Bearer " + TwitterService.getTokenAsync(TWITTER_AUTH_TOKEN).await().accessToken
+                prefs.twitterToken = "Bearer " + service.getTokenAsync(TWITTER_AUTH_TOKEN).await().accessToken
             }
-            val tweets = TwitterService.getTweetsAsync(prefs.twitterToken!!, userId).await()
+            val tweets = service.getTweetsAsync(prefs.twitterToken!!, userId).await()
             Either.Value(tweets)
         } catch (e: Exception) {
             Either.Error(Error(e.message))

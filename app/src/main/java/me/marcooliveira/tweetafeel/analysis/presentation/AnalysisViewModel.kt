@@ -7,12 +7,13 @@ import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import me.marcooliveira.tweetafeel.analysis.data.repository.GoogleCloudService
 import me.marcooliveira.tweetafeel.analysis.domain.GetAnalysis
 import me.marcooliveira.tweetafeel.core.Error
 
 class AnalysisViewModel(application: Application): AndroidViewModel(application) {
 
-    private val getAnalysis = GetAnalysis()
+    private val getAnalysis = GetAnalysis(GoogleCloudService())
 
     internal val sentiment = MutableLiveData<Sentiment>()
     internal val error = MutableLiveData<String?>()

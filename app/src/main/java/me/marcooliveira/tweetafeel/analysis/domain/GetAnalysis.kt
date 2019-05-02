@@ -10,7 +10,7 @@ import me.marcooliveira.tweetafeel.core.Constants.GOOGLE_KEY
 import me.marcooliveira.tweetafeel.core.Either
 import me.marcooliveira.tweetafeel.core.Error
 
-class GetAnalysis {
+class GetAnalysis(private val service: GoogleCloudService) {
 
     suspend fun execute(text: String): Either<Error, Sentiment> {
         return try {
@@ -18,7 +18,7 @@ class GetAnalysis {
                 document = Document(GOOGLE_DOCUMENT_TYPE, text)
                 encoding = GOOGLE_DOCUMENT_ENCODING
             }
-            val response = GoogleCloudService.getSentimentAsync(GOOGLE_KEY, requestBody).await()
+            val response = service.getSentimentAsync(GOOGLE_KEY, requestBody).await()
             Either.Value(SentimentMapper.map(response)!!)
         } catch (e: Exception) {
             Either.Error(Error(e.message))
