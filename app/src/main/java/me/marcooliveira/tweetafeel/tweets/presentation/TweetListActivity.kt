@@ -60,7 +60,9 @@ class TweetListActivity : AppCompatActivity() {
     }
 
     private fun init() {
-        viewModel.loadTweets("maarcooliveira")
+        twitterUser?.let {
+            viewModel.loadTweets(it)
+        }
     }
 
 }

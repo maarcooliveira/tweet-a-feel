@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="32dp"
+    android:gravity="center"
+    android:background="@color/whiteText">
+
+    <ImageView
+        android:layout_width="124dp"
+        android:layout_height="124dp"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_main_icon"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:gravity="center"
+        android:textSize="24sp"
+        android:layout_marginTop="8dp"
+        android:textStyle="bold"
+        android:textColor="@color/textDarker"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/twitterUserLayout"
+        android:layout_marginTop="40dp"
+        android:hint="@string/user_id_hint"
+        style="@style/MaterialTextInputLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/twitterUser"
+            android:inputType="textNoSuggestions"
+            style="@style/MaterialTextInputEditText"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/viewTweetsButton"
+        style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/user_view_tweets"
+        android:textSize="16sp"
+        android:textAllCaps="false"
+        android:enabled="false"
+        app:cornerRadius="4dp"/>
+
+</LinearLayout>

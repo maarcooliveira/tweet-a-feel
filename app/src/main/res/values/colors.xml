@@ -7,11 +7,12 @@
     <color name="text">#4d4d4d</color>
     <color name="textDarker">#494949</color>
     <color name="textLighter">#b2c0cc</color>
-    <color name="listDivider">#3CB2C0CC</color>
-    <color name="background">#f6f4f4</color>
-
     <color name="whiteText">#FFFFFF</color>
     <color name="whiteTextDarker">#DADADA</color>
+
+    <color name="listDivider">#3CB2C0CC</color>
+    <color name="background">#f6f4f4</color>
+    <color name="text_input_border">#d1d4d9</color>
 
     <color name="sentiment_negative">#CC4646</color>
     <color name="sentiment_positive">#14aa4b</color>

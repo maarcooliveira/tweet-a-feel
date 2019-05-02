@@ -11,13 +11,19 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
-        <activity android:name=".tweets.presentation.TweetListActivity">
+
+        <activity
+            android:name=".main.presentation.MainActivity"
+            android:windowSoftInputMode="adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <action android:name="android.intent.action.VIEW"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+
+        <activity android:name=".tweets.presentation.TweetListActivity"/>
+
         <activity android:name=".analysis.presentation.AnalysisActivity"/>
     </application>
 

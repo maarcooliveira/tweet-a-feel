@@ -8,4 +8,6 @@
     <string name="tweets_loading_error">Não conseguimos carregar os tweets :(</string>
     <string name="button_retry">Repetir</string>
     <string name="button_cancel">Cancelar</string>
+    <string name="user_id_hint">@TwitterUser</string>
+    <string name="user_view_tweets">Ver tweets</string>
 </resources>
