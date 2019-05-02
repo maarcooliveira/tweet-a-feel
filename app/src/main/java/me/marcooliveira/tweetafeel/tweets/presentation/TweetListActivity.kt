@@ -11,6 +11,7 @@ import kotlinx.android.synthetic.main.activity_tweet_list.*
 import me.marcooliveira.tweetafeel.R
 import me.marcooliveira.tweetafeel.core.LoadingException
 import me.marcooliveira.tweetafeel.core.Navigator
+import me.marcooliveira.tweetafeel.core.switchVisibility
 import me.marcooliveira.tweetafeel.tweets.data.model.Tweet
 import me.marcooliveira.tweetafeel.tweets.presentation.adapter.TweetAdapter
 
@@ -40,6 +41,7 @@ class TweetListActivity : AppCompatActivity() {
 
     private fun setupListeners() {
         viewModel.tweets.observe(this, Observer {
+            tweetListLoadingView.switchVisibility(false)
             adapter.setData(it)
         })
 
@@ -49,7 +51,9 @@ class TweetListActivity : AppCompatActivity() {
                 positiveButton(R.string.button_retry) {
                     init()
                 }
-                negativeButton(R.string.button_cancel)
+                negativeButton(R.string.button_cancel) {
+                    finish()
+                }
             }
             Crashlytics.logException(LoadingException(it))
         })

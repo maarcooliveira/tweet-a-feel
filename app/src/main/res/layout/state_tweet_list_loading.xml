@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whiteText"
+    android:animateLayoutChanges="true">
+
+    <androidx.core.widget.ContentLoadingProgressBar
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-6dp"
+        android:indeterminate="true"/>
+
+    <include layout="@layout/state_tweet_list_loading_item"/>
+    <include layout="@layout/state_tweet_list_loading_item"/>
+    <include layout="@layout/state_tweet_list_loading_item"/>
+    <include layout="@layout/state_tweet_list_loading_item"/>
+    <include layout="@layout/state_tweet_list_loading_item"/>
+
+</LinearLayout>

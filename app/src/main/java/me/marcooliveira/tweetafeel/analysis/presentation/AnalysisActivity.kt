@@ -58,7 +58,9 @@ class AnalysisActivity : AppCompatActivity() {
                 positiveButton(R.string.button_retry) {
                     init()
                 }
-                negativeButton(R.string.button_cancel)
+                negativeButton(R.string.button_cancel) {
+                    finish()
+                }
             }
             Crashlytics.logException(LoadingException(it))
         })
