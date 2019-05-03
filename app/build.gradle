@@ -61,6 +61,10 @@ dependencies {
     testImplementation deps.mockitoKotlin
     testImplementation deps.mockitoInline
     testImplementation deps.robolectric
+    testImplementation deps.junitx
+    androidTestImplementation deps.espressoIntents
+    androidTestImplementation deps.truth
+    androidTestImplementation deps.testRules
 }
 
 apply plugin: 'com.google.gms.google-services'
